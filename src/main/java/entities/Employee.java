@@ -11,8 +11,8 @@ import java.util.Set;
 public class Employee {
     private Integer id;
     private String firstName;
-    private String lastName;
     private String middleName;
+    private String lastName;
     private String jobTitle;
     private Department department;
     private Employee manager;
