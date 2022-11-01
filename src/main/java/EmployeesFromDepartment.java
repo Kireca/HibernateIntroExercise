@@ -1,8 +1,10 @@
 import entities.Employee;
+import entities.Project;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.stream.Collectors;
 
 public class EmployeesFromDepartment {
 
@@ -23,7 +25,11 @@ public class EmployeesFromDepartment {
         entityManager.createQuery(SELECT_QUERY, Employee.class)
                 .setParameter("dp", DEPARTMENT)
                 .getResultList()
-                .forEach(e -> System.out.printf(PRINT_FORMAT, e.getFirstName(), e.getLastName(), e.getDepartment(), e.getSalary()));
+                .forEach(e -> System.out.printf(PRINT_FORMAT, e.getFirstName(), e.getLastName(), DEPARTMENT, e.getSalary()));
+
+
+
+
 
 
         entityManager.close();
