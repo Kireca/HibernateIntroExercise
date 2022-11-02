@@ -36,7 +36,6 @@ public class AddingANewAddressAndUpdatingEmployee {
 
         exitOfProgram(entityManager, count);
 
-        System.out.println(count);
     }
 
     private static void exitOfProgram(EntityManager entityManager, int count) {
