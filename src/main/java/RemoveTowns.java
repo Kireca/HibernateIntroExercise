@@ -27,6 +27,7 @@ public class RemoveTowns {
                 .setParameter(TOWN_NAME, townName)
                 .getSingleResult();
 
+
         final List<Address> addressList = entityManager
                 .createQuery(SELECT_ADDRESS_QUERY, Address.class)
                 .setParameter(TOWN_NAME, townName)
@@ -43,6 +44,7 @@ public class RemoveTowns {
         });
 
         entityManager.remove(currentTown);
+
 
         System.out.printf(PRINT_FORMAT,
                 addressList.size(),
